@@ -3,11 +3,21 @@ package LoginScreen;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.HashMap;
+
 import javax.imageio.ImageIO;
+import javax.print.attribute.HashAttributeSet;
 import javax.swing.*;
 
 public class Login {
     public static void main(String args[]) {
+
+        HashMap<String, String> loginData = new HashMap<String, String>();
+        loginData.put("briha", "1234");
+        loginData.put("harshith", "1234");
+
+        JTextField userName = new JTextField(15);
+        JTextField passWord = new JTextField(15);
 
         // Initialising BufferedImage Class to read the FileName
         BufferedImage img = null;
@@ -35,7 +45,7 @@ public class Login {
         splitPane.setTopComponent(leftComponent);
 
         // Right Component which holds the Registration / Login Form
-        JComponent rightComponent = new JButton("Insert Login / Registration Form Here");
+        JComponent rightComponent = new JLabel("Insert Login / Registration Form Here");
         // Adding this component to the splitPane
         splitPane.setBottomComponent(rightComponent);
 
